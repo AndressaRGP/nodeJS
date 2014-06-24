@@ -1,0 +1,154 @@
+/*banner.css*/
+
+.banner-outline {
+	 position: relative;
+}
+
+.banner {
+	position: absolute;
+	top: 232px;
+	width:1000px;
+	height:450px;
+}
+.background-board{
+	width: 1000px;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+.logo {
+	width: 300px;
+	position: absolute;
+	left: 376px;
+	top: 455px;
+}
+
+.rope-1 {
+	left: 250px;
+	position: relative;
+	bottom: -3px;
+}
+
+.rope-2 {
+	left: 750px;
+	position: relative;
+	bottom: -3px;
+}
+
+.org-logo {
+	width: 15px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.middle-panel {
+	margin-top: 180px;
+}
+
+.timer {
+	border: 3px solid;
+	border-color: #DDD;
+	padding-bottom: 20px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.time {
+	font-size: 55px;
+	font-style:bold;
+}
+
+.overflow-y {
+	/*height: 50px;*/
+	overflow-y:scroll;
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 100px; 
+}
+
+.submission-area {
+	position: absolute;
+	/*bottom:10px;*/
+}
+
+.share-button {
+	margin-right: 10px;
+	margin-left:10px;
+}
+
+.photo-upload {
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	border: 3px dashed;
+}
+
+.plus-size {
+	font-size: 300%;
+}
+
+.plus-location {
+	margin-top: 49px;
+}
+
+.left-panel {
+	vertical-align: middle;
+	float:left;
+}
+
+.right-panel {
+	float:right;
+}
+
+.top-bottom-padding {
+	padding-top:25px;
+	padding-bottom: 25px
+}
+
+.avatar-image {
+	height:200px;
+}
+
+/*Banner Content*/
+
+.banner-content {
+	display:none;
+}
+
+.banner-top-teams-charities {
+	display:none;
+}
+
+.banner-create-team {
+	display:none;
+}
+
+.banner-my-profile {
+	display:none;
+}
+.banner-following {
+	display:none;
+}
+.banner-register-charity {
+	display:none;
+}
+
+/*Three column panels*/
+
+.panel {
+	width: 300px;
+	height: 450px;
+	float:left;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.clear {
+	clear: both;
+}
+
+
+

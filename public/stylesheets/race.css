@@ -1,0 +1,17 @@
+.wave {
+	 background-image:url("/images/wave4.png");
+	 background-repeat: repeat-x;
+	 width:2000px;
+	 height:100px;
+}
+
+.sailboat {
+	width:100px;
+	height:109px;
+}
+
+.conveyorbelt {
+	width: 214px;
+	height: 122px;
+}
+

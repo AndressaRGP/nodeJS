@@ -1,0 +1,259 @@
+extends layout
+
+block append head
+	link(rel='stylesheet', href='/stylesheets/banner.css')
+	link(rel='stylesheet', href='/stylesheets/fontello/animation.css')
+	link(rel='stylesheet', href='/stylesheets/fontello/fontello-codes.css')
+	link(rel='stylesheet', href='/stylesheets/fontello/fontello-embedded.css')
+	link(rel='stylesheet', href='/stylesheets/fontello/fontello-ie7-codes.css')
+	link(rel='stylesheet', href='/stylesheets/fontello/fontello-ie7.css')
+	link(rel='stylesheet', href='/stylesheets/fontello/fontello.css')
+
+block content
+	.fb-root
+
+	.banner-outline
+		img.background-board(src="/images/ws-leaderboard.png")
+		//img.rope-1(src="/images/rope.png")
+		//img.rope-2(src="/images/rope.png")
+		//img.logo(src="/images/cropped-logo.png")
+		.banner
+			.banner-top-teams-charities
+				.panel
+					.teams
+						h1.text-center Teams
+						ol
+							li <img class="org-logo" src="/images/twitter-icon.png"/>Twitter NYC
+							li <img class="org-logo" src="/images/twitter-icon.png"/>Dropbox Minneapolis
+							li <img class="org-logo" src="/images/twitter-icon.png"/>Netflix L.A.
+							li <img class="org-logo" src="/images/twitter-icon.png"/>iRobotHQ
+							li <img class="org-logo" src="/images/twitter-icon.png"/>T-Mobile Dallas
+							li <img class="org-logo" src="/images/twitter-icon.png"/>GoPro Toronto
+							li <img class="org-logo" src="/images/twitter-icon.png"/>GENYC7thfl
+							li <img class="org-logo" src="/images/twitter-icon.png"/>Levis Mall of America
+							li <img class="org-logo" src="/images/twitter-icon.png"/>Apple Cupertino Official
+							li <img class="org-logo" src="/images/twitter-icon.png"/>Google SanFran Interns 2014
+					.your-team.text-center
+						h4 Your Team
+						.team-info
+							span.number 2349
+							img.org-logo(src="/images/twitter-icon.png")
+							span.name Qwantech
+				.panel
+					.timer.middle-panel.text-center
+						h1 Time to next race:
+						span.time 55:16
+						h6 Sign in on the mobile app to register for this race
+						h7 Search for Workshape in Google Play and Apple App Store
+				.panel
+					.charities
+						h1.text-center Charities
+						ol
+							li <img class="org-logo" src="/images/twitter-icon.png"/>Twitter NYC
+							li <img class="org-logo" src="/images/twitter-icon.png"/>Dropbox Minneapolis
+							li <img class="org-logo" src="/images/twitter-icon.png"/>Netflix L.A.
+							li <img class="org-logo" src="/images/twitter-icon.png"/>iRobotHQ
+							li <img class="org-logo" src="/images/twitter-icon.png"/>T-Mobile Dallas
+							li <img class="org-logo" src="/images/twitter-icon.png"/>GoPro Toronto
+							li <img class="org-logo" src="/images/twitter-icon.png"/>GENYC7thfl
+							li <img class="org-logo" src="/images/twitter-icon.png"/>Levis Mall of America
+							li <img class="org-logo" src="/images/twitter-icon.png"/>Apple Cupertino Official
+							li <img class="org-logo" src="/images/twitter-icon.png"/>Google SanFran Interns 2014
+					.your-team.text-center
+						h4 Your Charity
+						.team-info
+							span.number 13
+							img.org-logo(src="/images/twitter-icon.png")
+							span.name United Way
+				.clear
+			.banner-create-team
+				.panel
+					.submission-area
+						h1.text-center Create a Team
+						div
+							input(name="team-name" placeholder="Team Name")
+							div
+								| (max. 20 character long name)
+						div
+							input(name="city" placeholder="City")
+						div
+							input(name="company" placeholder="Company")
+						div
+							div
+								| Enter team members email
+							input(name="email" placeholder="Email")
+							input(type="button" value="Add")
+
+							div.overflow-y
+								- for (var i = 0; i < 100; i++) {
+								p The number is: #{i} <img class="org-logo" src="/images/twitter-icon.png"/> <a href="#">Admin</a>
+								- }
+				.panel.middle-panel.text-center
+					h5 Upload your company or team logo
+					div.photo-upload
+						.plus-location
+							<i class="icon-plus plus-size"></i>
+				.panel
+					h1.text-center Choose a Charity
+					div
+						input(name="company" placeholder="Search for a Charity")
+					div.overflow-y
+						- for (var i = 0; i < 100; i++) {
+						p The number is: #{i} <img class="org-logo" src="/images/twitter-icon.png"/> <a href="#">Admin</a>
+						- }
+					div
+						input.submit-button(type="button" value="Create My Team!")
+			.banner-my-profile
+				.panel
+					h1.text-center My Profile
+					div.top-bottom-padding
+						div.left-panel
+							span Connected with:
+						div.right-panel
+							<i class="icon-facebook plus-size"></i>
+					div.clear.top-bottom-padding
+						div.left-panel
+							span Switch to:
+						div.right-panel
+							<i class="icon-twitter-squared plus-size"></i>
+							<i class="icon-googleplus plus-size"></i>
+					div.clear.top-bottom-padding
+						div.left-panel
+							span My Team:
+						div.right-panel
+							div
+								span Room 6 Stompers
+							div
+								span Team Ramrod
+					div.clear.top-bottom-padding
+						div.left-panel
+							span My Comapny:
+						div.right-panel
+							span BgCorp Inc.
+				.panel.middle-panel.text-center
+					h5 Change your avatar
+					img.avatar-image(src="/images/avatars.png")
+				.panel
+					h1.text-center My Race Results					
+					div.top-bottom-padding
+						div.left-panel
+							span First Race:
+						div.right-panel
+							span June 10, 2014
+					div.clear.top-bottom-padding
+						div.left-panel
+							span Total Races Run:
+						div.right-panel
+							span 24
+					div.clear.top-bottom-padding
+						div.left-panel
+							span Best finish:
+						div.right-panel
+							strong 14th
+					div.clear.top-bottom-padding
+						div.left-panel
+							span Estimated calories<br /> burnt since first race:
+						div.right-panel
+							span Over 9000!!
+					.text-center
+						h4 Great Work! Share your results and spread the word about the charity you're supporting!
+						div
+							.fb-share-button.share-button(data-href="https://developers.facebook.com/docs/plugins/" data-type="button")
+							a.share-button(href="https://twitter.com/share" class="twitter-share-button" data-count="none") Tweet
+							.g-plus.share-button(data-action="share" data-annotation="none")
+			.banner-following
+				.panel
+					h2.text-center Find a Team to Follow
+					div
+						input(name="team-name" placeholder="Search for a team")
+						
+						div.overflow-y
+							- for (var i = 0; i < 100; i++) {
+							p The number is: #{i} <img class="org-logo" src="/images/twitter-icon.png"/> <a href="#">Admin</a>
+							- }
+
+					h2.text-center Find a Charity to Follow
+					div
+						input(name="team-name" placeholder="Search for a team")
+						
+						div.overflow-y
+							- for (var i = 0; i < 100; i++) {
+							p The number is: #{i} <img class="org-logo" src="/images/twitter-icon.png"/> <a href="#">Admin</a>
+							- }
+				.panel.middle-panel.text-center
+					h2.text-center I'm Following
+					div
+						div.overflow-y
+							- for (var i = 0; i < 100; i++) {
+							p The number is: #{i} <img class="org-logo" src="/images/twitter-icon.png"/> <a href="#">Admin</a>
+							- }
+				.panel
+					div
+						h1.text-center Top Teams
+						ol
+							li <img class="org-logo" src="/images/twitter-icon.png"/>Twitter NYC
+							li <img class="org-logo" src="/images/twitter-icon.png"/>Dropbox Minneapolis
+							li <img class="org-logo" src="/images/twitter-icon.png"/>Netflix L.A.
+							li <img class="org-logo" src="/images/twitter-icon.png"/>iRobotHQ
+							li <img class="org-logo" src="/images/twitter-icon.png"/>T-Mobile Dallas
+					div
+						h1.text-center Top Charities
+						ol
+							li <img class="org-logo" src="/images/twitter-icon.png"/>Twitter NYC
+							li <img class="org-logo" src="/images/twitter-icon.png"/>Dropbox Minneapolis
+							li <img class="org-logo" src="/images/twitter-icon.png"/>Netflix L.A.
+							li <img class="org-logo" src="/images/twitter-icon.png"/>iRobotHQ
+							li <img class="org-logo" src="/images/twitter-icon.png"/>T-Mobile Dallas
+
+			.banner-register-charity
+				form(action="", method="post")
+					.panel
+						h2.text-center Find a Team to Follow
+						
+						div
+							input(name="charity-name" placeholder="Charity Name(Branch/Division, etc)")
+						div
+							input(name="contact-name" placeholder="Person Name")
+						div
+							input(name="contact-email" placeholder="Contact Email Address")
+						div
+							input(name="contact-phone" placeholder="10-Digit Phone Number")
+						div
+							input(name="primary-city" placeholder="City")
+						div
+							input(name="website-address" placeholder="Website Address")
+					.panel.middle-panel.text-center
+						h5 Upload your company or team logo
+						div.photo-upload
+							.plus-location
+								<i class="icon-plus plus-size"></i>
+					.panel
+						h1 About and Terms:
+						div
+							WORKSHAPE allows teams of people from organizations to choose a charity to raise awareness (and funds!) for. By registering your charity  on WORKSHAPE, you’re connecting with an audience who appreciates the value of good health, teamwork, and social networking both online and off.Upon clicking the “Register My Charity” button below, a member of the WORKSHAPE team will phone or email your contact person to verify your charitable status.
+						input(type="button" value="Register My Charity!")
+			.banner-content
+				| THIS IS GREAT CONTENT!
+
+	script(src="/js/social-media-button.js")
+	script.
+		$(function () {
+			switch (#{banner}) {
+				case 1:
+					$(".banner-top-teams-charities").css("display", "block");
+					break;
+				case 2:
+					$(".banner-create-team").css("display", "block");
+					break;
+				case 3:
+					$(".banner-my-profile").css("display", "block");
+					break;
+				case 4:
+					$(".banner-following").css("display", "block");
+					break;
+				case 5:
+					$(".banner-register-charity").css("display", "block");
+					break;
+			}
+		});		
+
