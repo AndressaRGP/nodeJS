@@ -9,13 +9,15 @@ var sessionOBJ = require('./session');
 
 var teams = {} //array of teams, OBJ? 
 var teamPlayers = []
-
-router.all('/', function(req, res, next) {
+//----added to cross plataform
+//if get an error because of put request, add the 3th line and the asterisco
+router.all('*', function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  res.header("Access-Control-Allow-Methods", "PUT, GET,POST");
   next();
  });
-
+//----cross plata
 router.post('/', function (req, res){
   //POST teams/?session=12312312312312321
        

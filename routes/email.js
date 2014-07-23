@@ -2,6 +2,16 @@ var express = require('express');
 var router = express.Router();
 var nodemailer = require("nodemailer")
 
+//----enable cross plataform
+router.all('*', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  res.header("Access-Control-Allow-Methods", "PUT, GET,POST");
+  next();
+ });
+
+//---end cross plataform
+
 // create reusable transport method (opens pool of SMTP connections)
 var smtpTransport = nodemailer.createTransport("SMTP",{
     service: "Gmail",
@@ -30,17 +40,17 @@ var sendEmails = function(emails, mailOptions, emailErrorHandling){
 	};
 }
 
-router.post('/', function (req, res) {
+router.post('/:teamID', function (req, res) {
 	// console.log(');
 	
-
 	var body = req.body
-	var userName = body.name
+	var userName = "You"
+	var teamID = body.teamID // to put in the email requestmckuchta@gmail.com
 	var mailOptions = {
 	    from: "Workshape <info.workshape@gmail.com>", // sender address
 	    subject: "Hello ✔", // Subject line
 	    text: "Hello world ✔", // plaintext body
-	    html: "Hello <b>"+userName+"</b>,<br/><br/>Your account has been created successfully.<br/><br/>Workshape." // html body
+	    html: "Hello <b>"+userName+"</b>,<br/><br/>You were invited to make part of the team.<br/><br/>Workshape." // html body
 	}
 
 	console.log('Trying to send an email');
